@@ -160,7 +160,7 @@ export default function Home() {
       {/* Main content */}
       <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8 sm:px-6 lg:px-8">
         {/* Futuristic Header */}
-        <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+        <div className="text-center mb-8 sm:mb-12 animate-fade-in relative z-10">
           <div className="relative inline-block mb-4">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 blur-2xl opacity-50 animate-pulse"></div>
             <h1 className="relative text-5xl sm:text-7xl font-black text-white mb-2 drop-shadow-2xl tracking-tight">
@@ -183,10 +183,12 @@ export default function Home() {
         </div>
 
         {/* Enhanced Search Bar */}
-        <SearchBar onSearch={handleSearch} />
+        <div className="relative z-50 w-full flex justify-center">
+          <SearchBar onSearch={handleSearch} />
+        </div>
 
         {/* Weather Content with Bento Grid Layout */}
-        <div className="mt-8 sm:mt-12 w-full max-w-7xl px-2">
+        <div className="mt-8 sm:mt-12 w-full max-w-7xl px-2 relative z-10">
           {loading && (
             <div className="flex flex-col items-center justify-center py-20">
               <div className="relative w-20 h-20 mb-6">
