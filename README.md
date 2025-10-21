@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeatherLive - Real-Time Weather Web App
 
-## Getting Started
+A modern, beautiful real-time weather application built with Next.js and OpenWeatherMap API. Features a stunning UI with animations and weather-specific visual effects.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🌡️ **Real-time Weather Data** - Get current weather conditions for any city
+- 🎨 **Modern Design** - Beautiful gradient UI with glassmorphism effects
+- ✨ **Weather Animations** - Dynamic animations that change based on weather conditions
+  - ☔ Rain effects for rainy weather
+  - ❄️ Snowfall animations for snow
+  - ⚡ Lightning effects for thunderstorms
+- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- 🔍 **City Search** - Search for weather in any city worldwide
+- 📊 **Detailed Weather Info** - Humidity, pressure, wind speed, visibility, sunrise/sunset times
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+- OpenWeatherMap API key (free)
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/pkprajapati7402/Real-Time-Weather-app.git
+   cd Real-Time-Weather-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Get your OpenWeatherMap API Key**
+   - Visit [OpenWeatherMap](https://openweathermap.org/api)
+   - Sign up for a free account
+   - Get your API key from the API section
+
+4. **Configure Environment Variables**
+   - Copy `.env.example` to `.env.local`
+   - Add your OpenWeatherMap API key:
+     ```bash
+     NEXT_PUBLIC_OPENWEATHER_API_KEY=your_api_key_here
+     ```
+
+5. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 15+
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **API**: OpenWeatherMap REST API
+- **Animations**: CSS animations & Tailwind animation utilities
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx          # Main page component
+│   ├── layout.tsx        # Layout component
+│   └── globals.css       # Global styles & custom animations
+├── components/
+│   ├── SearchBar.tsx     # City search component
+│   └── WeatherDisplay.tsx # Weather information display
+└── lib/
+    └── weatherApi.ts     # Weather API utilities
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### SearchBar
+- City search functionality
+- Animated gradient border
+- Real-time search input
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### WeatherDisplay
+- Main weather card with temperature
+- Weather-specific animations
+- Detailed information grid (humidity, pressure, wind, visibility, etc.)
+- Sunrise/sunset times
 
-## Learn More
+### Weather API Integration
+- Fetch weather data from OpenWeatherMap
+- Error handling
+- Weather emoji mapping
+- Time formatting utilities
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 Animations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app includes several weather-specific animations:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Blob Animation**: Background gradient blobs that animate continuously
+- **Float Animation**: Temperature emoji gently floats up and down
+- **Rain Effect**: Cyan gradient pulse for rainy weather
+- **Snow Effect**: Snowflake particles falling down the screen
+- **Lightning Effect**: Yellow flashes simulating thunderstorms
+- **Fade-in**: Smooth entrance animations for content
 
-## Deploy on Vercel
+## 📦 Build & Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Build
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deploy on Vercel
+```bash
+vercel deploy
+```
+
+Or push to GitHub and connect to Vercel for automatic deployments.
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_OPENWEATHER_API_KEY=your_api_key_here
+```
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 📧 Contact
+
+For questions or suggestions, please feel free to reach out!
+
+---
+
+**Made with ❤️ by [Your Name]**
