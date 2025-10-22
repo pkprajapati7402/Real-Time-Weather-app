@@ -142,5 +142,5 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 For questions or suggestions, please feel free to reach out!
 
 ---
-
-**Made with ❤️ by [Your Name]**
+## Contribution
+Contributions are always welcome. Please feel free to fork the repository, address any issues, and submit a pull request with a detailed description of your changes.
